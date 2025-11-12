@@ -37,7 +37,7 @@ We will utilize **Data Pump (expdp / impdp)** utilities for schema-level migrati
 ### **Migration Day (Execution Plan)**
 
 #### **Reporting Time**
-- All should be **inside the Datacenter by 6:30 AM** sharp.
+- All should be **inside the Datacenter by 7:30 AM** sharp.
 
 #### **Network Setup**
 - Confirm patch cable availability and setup for connecting the **backup server** to the **Exadata server**.
@@ -101,3 +101,4 @@ directory=DATA_PUMP_DIR dumpfile=SCHEMA_NAME_%U.dmp logfile=expdp_SCHEMA_NAME.lo
 # Import into 19c
 impdp system/password@IFMSPDB schemas=SCHEMA_NAME \
 directory=DATA_PUMP_DIR dumpfile=SCHEMA_NAME_%U.dmp logfile=impdp_SCHEMA_NAME.log
+
